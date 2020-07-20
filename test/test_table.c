@@ -2,9 +2,6 @@
 #include <stdio.h>
 #include <table/parse.h>
 
-// TODO: get some parseCell property tests / fuzzes going
-// TODO: cases for different DataTypes
-
 CTEST(parseTableSuite, valid) {
     int rows = 3, cols = 3;
     char *path = "test/res/valid.csv"; // assuming working directory is project directory
@@ -75,4 +72,3 @@ CTEST(parseTableSuite, empty) {
     ASSERT_NULL(t);
 }
 
-// TODO: file für \r und \r\n

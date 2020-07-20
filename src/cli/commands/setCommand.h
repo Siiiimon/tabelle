@@ -7,7 +7,7 @@
 #include "../../table/types.h"
 #include "../../table/modify.h"
 #include "../../table/parse.h"
-#include "../cli.h" // todo: do we need this??
+#include "../cli.h"
 
 void commandSet(Table *t, char *in);
 

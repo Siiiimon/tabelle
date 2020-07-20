@@ -19,7 +19,6 @@ int _countCols(char *source, char delim) {
     ließt Datei ein und zählt Anzahl an Zeilen und Spalten
 */
 int countRowsAndColumns(char *path, int *rows, int *cols) {
-    // todo: merge into parseTable
     // datei mit leserechten öffnen
     FILE *file = fopen(path, "r");
     if (file == NULL) {

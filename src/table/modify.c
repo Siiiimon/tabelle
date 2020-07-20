@@ -19,7 +19,6 @@ void setCell(Table *t, int row, int col, Cell *c) {
     t->table[row * t->width + col] = c;
 }
 
-// todo: add to calc.c
 /*
     summiert alle werte einer spalte (ignoriert strings)
     gibt einen pointer zurück. Falls ein Fehler aufgetreten ist wird NULL zurückgegen.

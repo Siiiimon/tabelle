@@ -1,7 +1,5 @@
 #include "print.h"
 
-// TODO: add proper padding
-
 /*
     gibt komplette Tabelle aus
 */

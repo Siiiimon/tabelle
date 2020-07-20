@@ -21,7 +21,7 @@ void commandSet(Table *t, char *in) {
     }
 
     // nach Zeileninhalt fragen
-    printf("zelle[%d][%d] ausgewählt, bitte zeilen inhalt eingeben (ENTER zum abbrechen)\n> \n", row, col);
+    printf("zelle[%d][%d] ausgewählt, bitte zeilen inhalt eingeben (ENTER zum abbrechen)\n> ", row, col);
     char buf[1024];
     char *setin = fgets(buf, 1024, stdin);
     if (setin == NULL || *setin == '\n') {
@@ -30,6 +30,5 @@ void commandSet(Table *t, char *in) {
         return;
     }
     Cell *setcell = parseCell(setin);
-    free(setin);
     setCell(t, row, col, setcell);
 }

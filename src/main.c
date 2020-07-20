@@ -4,10 +4,12 @@
 #include "table/types.h"
 #include "cli/cli.h"
 
+// 'hilfe' eingeben um eine Übersicht der Funktionen zu bekommen
+
 /*
-    in 'main' wickelt sich der komplette programmablauf ab
-    'main' kümmert sich fast nur um das entgegen nehmen von nutzer input
-    und delegiert jegliche komplexe funktionalität an untermodule
+    in 'main' wickelt sich der komplette Programmablauf ab
+    'main' kümmert sich fast nur um das entgegen nehmen von Nutzerinput
+    und delegiert jegliche komplexe Funktionalität an Untermodule
 */
 int main(int argc, char const *argv[]) {
     int rows, cols, isRunning = 1;
@@ -18,6 +20,7 @@ int main(int argc, char const *argv[]) {
                "Nutzung: tabelle.exe <datei>\n");
         return 1;
     }
+    // 1. Argument als 'path' speichern
     char *path = (char *) argv[1];
     if (path == NULL) {
         printf("Unbekannter Parameterformat\n"
@@ -52,7 +55,6 @@ int main(int argc, char const *argv[]) {
 
     // speicher freigeben
     freeTable(t);
-//  void *lul = malloc(8); // TODO: check for leaks
 
     // erfolgreich beenden
     return 0;
