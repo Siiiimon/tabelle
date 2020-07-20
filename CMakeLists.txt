@@ -5,11 +5,7 @@ set(CMAKE_C_STANDARD 99)
 
 if (CMAKE_BUILD_TYPE MATCHES Debug)
     message("building for debug")
-    if (WIN32)
-        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /Zi /Wall")
-    else()
-        set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -g -Wall")
-    endif ()
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O0 -g")
 endif ()
 
 # build
