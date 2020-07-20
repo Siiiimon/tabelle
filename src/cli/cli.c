@@ -7,7 +7,7 @@ int handleUserInput(Table *t, char *in) {
     if (in == NULL || strncmp(in, "ende", 4) == 0) {
         return 1;
     } else {
-        char *token = strsep(&in, " ");
+        char *token = strtok(in, " ");
         if (strncmp(token, "zeige", 5) == 0) {
             commandPrint(t, in);
         } else if (strncmp(token, "setze", 5) == 0) {

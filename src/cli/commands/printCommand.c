@@ -4,7 +4,7 @@
     verarbeitet Nutzereingabe für den 'zeige' Kommando
 */
 void commandPrint(Table *t, char *in) {
-    char *token = strsep(&in, " ");
+    char *token = strtok(in, " ");
     if (token == NULL) {
         printTable(t);
     } else if (strncmp(token, "zeile", 5) == 0) {
