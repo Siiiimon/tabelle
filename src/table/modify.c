@@ -24,25 +24,24 @@ void setCell(Table *t, int row, int col, Cell *c) {
     gibt einen pointer zurück. Falls ein Fehler aufgetreten ist wird NULL zurückgegen.
     Somit kann einfacher zwischen Fehler und validem Ergebnis unterschieden werden.
 */
-float *sumColumn(Table *t, int col) {
+int sumColumn(Table *t, int col, float *sum) {
     if (col >= t->width || col < 0) {
         printf("invalide spaltennummer\n");
-        return NULL;
+        return 1;
     }
 
-    float sum = 0;
     for (int y = 0; y < t->height; ++y) {
         Cell *value = t->table[y * t->width + col];
         switch (value->kind) {
             case l:
-                sum += (float) value->data.l;
+                *sum += (float) value->data.l;
                 break;
             case f:
-                sum += value->data.f;
+                *sum += value->data.f;
                 break;
             case str:
                 break;
         }
     }
-    return &sum;
+    return 0;
 }

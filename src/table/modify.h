@@ -6,6 +6,6 @@
 #include "types.h"
 
 void setCell(Table *t, int row, int col, Cell *c);
-float *sumColumn(Table *t, int col);
+int sumColumn(Table *t, int col, float *sum);
 
 #endif //TABELLE_MODIFY_H
